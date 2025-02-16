@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/stlyeHome.css">
+    <link rel="stylesheet" href="./assets/css/Testimonials.css">
+</head>
+<body>
+    <!-- ส่วนของ navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            PORTFOLIO  
+            <span>WEBSITE</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/About.html">About Me</a></li>
+            <li><a href="/Testimonials.html">Testimonials</a></li>
+            <li><a href="/PriceRate.html">Price Rate</a></li>
+            <li><a href="/Blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+<!-- navbar end -->
+ <div class="container">
+    <h1>ลูกค้าพอใจ</h1>
+    <h3>100%</h3> 
+ </div>
+    <!-- navbar end -->
+    <script src="../assets/java/java.js"></script>
+    <div class="heading">
+        <h1>การทำงานจริง</h1>
+    </div>
+     <div class="gallery">
+        
+        <div class="gallery-item">
+            <img src="./assets/IMG/THX1.png" alt="กิจกรรม 1" class="gallery-img" onclick="openModal(this)">
+        </div>
+       
+        
+    </div>
+
+    <!-- Modal for displaying enlarged image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <img id="modalImg" class="modal-content">
+        <span class="close-btn">&times;</span>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2025 amonthap | ทุกสิทธิ์ได้รับการคุ้มครอง</p>
+                <p>ติดต่อเรา: pa.panya7382@gmail.com</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://web.facebook.com/profile.php?id=100023802278735" class="social-icon">Facebook</a>
+                <a href="https://www.instagram.com/jjxp_pe/" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">call</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
