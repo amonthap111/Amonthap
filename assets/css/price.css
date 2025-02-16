@@ -1,0 +1,139 @@
+/* ตั้งค่าเริ่มต้น */
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* คอนเทนเนอร์หลัก */
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1280px;
+    padding: 20px;
+    margin: auto;
+}
+
+/* ส่วนรูปภาพ */
+.image-wrapper {
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transition: transform 0.1s ease-out;
+}
+
+/* ส่วนข้อมูล */
+.info {
+    width: 50%;
+}
+
+/* หัวข้อ */
+h2 {
+    font-size: 60px;
+    color: aliceblue;
+    text-align: left;
+    margin: 0;
+}
+
+/* ข้อความพารากราฟ */
+p {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+/* รายการคุณสมบัติ */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+ul li img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* ----------- RESPONSIVE DESIGN ----------- */
+
+/* สำหรับแท็บเล็ต (ขนาดกลาง) */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-wrapper {
+        width: 100%;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    ul li {
+        font-size: 20px;
+        justify-content: center;
+    }
+}
+
+/* สำหรับมือถือ (ขนาดเล็ก) */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-wrapper {
+        width: 100%;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    ul li {
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    ul li img {
+        width: 25px;
+    }
+}

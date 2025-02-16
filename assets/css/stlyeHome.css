@@ -1,0 +1,814 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    z-index: 100000;
+}
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.logo span {
+    font-size: 12px;
+    display: block;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin-left: 20px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    padding: 6px; /* กำหนด padding ตั้งแต่เริ่มต้น */
+    border: 2px solid transparent; /* กำหนด border โปร่งใสล่วงหน้า */
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box; /* ป้องกันการขยายตัว */
+}
+.nav-links a:hover {
+    border: 2px solid rgb(255, 255, 255);
+    padding: 6px;
+    border-radius: 20px;
+
+}
+.navbar .logo span {
+    font-size: 16px;
+    color: #3498db;
+}
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links li {
+    margin: 0 20px;
+}
+/* การซ่อน nav-links ในหน้าจอขนาดเล็ก */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.heading {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* การจัดรูปแบบพื้นฐาน */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.heading h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ในหน้าจอใหญ่ */
+    gap: 20px;
+}
+
+/* รูปแบบสำหรับ portfolio-item */
+.portfolio-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.portfolio-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+.portfolio-item a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.portfolio-item a:hover {
+    text-decoration: underline;
+}
+.heading h1{
+    color: #fff;
+    font-size: 150px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Style */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.courses {
+    padding: 20px;
+    
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.course-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.course-item:hover {
+    transform: translateY(-5px);
+}
+
+.course-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.course-item:hover .course-img {
+    opacity: 0.8;
+}
+
+.course-item h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #333;
+}
+
+.course-price {
+    font-size: 1.2em;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.course-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.course-btn:hover {
+    background-color: #2980b9;
+}
+footer {
+    background-color: #2C2F38;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-info {
+    margin-bottom: 20px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #3498db;
+}
+@media (max-width: 1024px) {
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์ในแท็บเล็ต */
+    }
+}
+@media (max-width: 1024px) {
+    .banner img{
+        width: 100%
+    }
+}
+/* Responsive Design: เมื่อหน้าจอเล็กลง (มือถือ/แท็บเล็ต) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        flex-direction: column;
+        z-index: 10000;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    .banner img{
+        width: 100%
+    }
+    .heading h1{
+        font-size:xx-large;
+    }
+    .portfolio {
+        grid-template-columns: 1fr; /* 1 คอลัมน์ในมือถือ */
+    }
+}
+
+/* จัดการกล่องรวม */
+.about-me-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* เพิ่ม flex-wrap เพื่อให้สามารถเปลี่ยนแปลงเป็นแถวแนวตั้งเมื่อหน้าจอแคบ */
+}
+
+/* กล่องสำหรับข้อมูล */
+.about-me-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1100px;
+    margin-bottom: 20px; /* เพิ่มช่องว่างระหว่างกล่อง */
+}
+
+/* รูปภาพ */
+.about-me-photo {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.profile-img {
+    width: 100%;
+    height: auto; /* ทำให้สูงเท่ากับสัดส่วนที่เหมาะสม */
+    border-radius: 8px;
+    max-width: 399px; /* จำกัดขนาดสูงสุดของรูปภาพ */
+}
+
+/* เนื้อหาข้อความ */
+.about-me-content {
+    flex: 2;
+    text-align: left;
+    max-width: auto;
+}
+
+.about-me-content h2 {
+    font-size: 28px;
+    font-weight: 200;
+    color: #333;
+}
+
+.about-me-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3d3d3d;
+    margin: 20px 0px;
+}
+
+.about-me-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* การปรับแต่ง Responsive สำหรับหน้าจอมือถือและแท็บเล็ต */
+@media (max-width: 768px) {
+    /* ทำให้กล่องข้อมูล (text) และรูปภาพแสดงในแถวแนวตั้ง */
+    .about-me-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ปรับขนาดรูปภาพให้พอดีกับหน้าจอ */
+    .about-me-photo {
+        margin-right: 0;
+        margin-bottom: 20px; /* เพิ่มช่องว่างระหว่างรูปภาพและข้อความ */
+        text-align: center; /* จัดตำแหน่งรูปภาพให้อยู่กลาง */
+    }
+
+    .profile-img {
+        max-width: 100%;
+        height: auto; /* รักษาสัดส่วนรูปภาพให้ถูกต้อง */
+    }
+
+    .about-me-content {
+        text-align: center; /* จัดข้อความให้ตรงกลางเมื่ออยู่บนมือถือ */
+    }
+
+    .about-me-content h2 {
+        font-size: 24px; /* ลดขนาดฟอนต์ในมือถือ */
+    }
+
+    .about-me-content h3 {
+        font-size: 14px; /* ลดขนาดฟอนต์ในมือถือ */
+    }
+
+    .about-me-content p {
+        font-size: 14px; /* ลดขนาดฟอนต์ในมือถือ */
+    }
+}
+
+/* การปรับแต่ง Responsive สำหรับหน้าจอมือถือที่มีขนาดเล็ก (เช่นมือถือแนวตั้ง) */
+@media (max-width: 480px) {
+    .about-me-container {
+        padding: 10px; /* ลดช่องว่างข้างใน */
+    }
+
+    .about-me-box {
+        padding: 15px; /* ลดช่องว่างภายในกล่อง */
+        width: 100%; /* กว้างเต็มหน้าจอ */
+    }
+
+    .profile-img {
+        max-width: 80%; /* ปรับขนาดรูปภาพให้เล็กลง */
+    }
+
+    .about-me-content h2 {
+        font-size: 20px; /* ลดขนาดฟอนต์ในมือถือเล็ก */
+    }
+
+    .about-me-content h3 {
+        font-size: 12px; /* ลดขนาดฟอนต์ในมือถือเล็ก */
+    }
+
+    .about-me-content p {
+        font-size: 12px; /* ลดขนาดฟอนต์ในมือถือเล็ก */
+    }
+}
+
+/* กำหนดพื้นที่ทั้งหมด */
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* รูปภาพและราคาของแต่ละบริการ */
+.service-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+/* กำหนดให้รูปภาพอยู่ทางซ้ายและราคาอยู่ทางขวา */
+.service-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* ขนาดของรูปภาพ */
+.service-image {
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ราคา */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* ชื่อบริการ */
+.service-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/* คำอธิบายบริการ */
+.service-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ทำให้ทุกอย่างปรับขนาดได้สำหรับอุปกรณ์ที่มีขนาดหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .service-item {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        width: 100%;
+    }
+}
+h1 {
+    color: aliceblue;
+    font-size: xx-large;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* ใช้ Flexbox ให้การ์ดเรียงแนวนอน */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* รองรับการปรับขนาดหน้าจอ */
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    color: black;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* เพิ่มลูกเล่นให้การ์ดมีเอฟเฟกต์ */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 18px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.order-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 600px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ปุ่ม Tabs */
+.tab-container {
+    margin: 20px;
+}
+
+.tab-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.tab-button:hover {
+    background-color: #0056b3;
+}
+
+/* เนื้อหา Blog */
+.blog-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.portfolio-container {
+    display: flex;
+    gap: 20px;
+   
+    overflow-x: auto;
+    padding: 20px;
+   
+}
+.portfolio-card {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+}
+.portfolio-card img {
+    width: 100%;
+    height: auto;
+}
+.portfolio-card .content {
+    padding: 15px;
+}
+.portfolio-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.portfolio-card .date {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.portfolio-card p {
+    font-size: 14px;
+    color: #555;
+}
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .portfolio-card {
+        width: 90%;
+    }
+}
+/* ปรับแต่งพื้นหลังและจัดศูนย์กลาง */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* การ์ดดีไซน์ */
+.design-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* เมื่อ hover ให้มีเงาเพิ่มขึ้น */
+.design-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* รูปภาพ */
+.design-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* เนื้อหาในการ์ด */
+.design-card .content {
+    padding: 15px;
+    text-align: center;
+}
+
+/* หัวข้อ */
+.design-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* วันที่ */
+.design-card .date {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* คำอธิบาย */
+.design-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ทำให้ responsive */
+@media screen and (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .design-card {
+        width: 90%;
+    }
+}
+.banner {
+    width: 100%;
+    height: 100vh; /* กำหนดให้สูงเต็มหน้าจอ */
+    overflow: hidden; /* ป้องกันการเลื่อนเมื่อรูปใหญ่เกินไป */
+}
+
+.banner img {
+    width: 100%;  /* ปรับขนาดให้กว้างเต็มพื้นที่ */
+    height: 100%; /* ปรับขนาดให้สูงเต็มพื้นที่ */
+    object-fit: cover; /* ให้ภาพขยายหรือย่อให้ครอบคลุมพื้นที่โดยไม่เสียสัดส่วน */
+}
+.heading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#heading-text {
+    animation: moveText 3s infinite;
+}
+
+
